@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Margherita Lazzarini page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="style2.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=Anton|Archivo+Narrow" rel="stylesheet">	
+	</head>
+	<body>
+	
+	<div id="mainPresentation">	
+		<span id="name">Margherita Lazzarini <br/></span>
+		<span class="about">Software developer.<br/></span>
+		<span class="about">Currently working at <a href="http://www.noemalife.com/index.php" target="blank">Noemalife SPA</a></span>
+		<br/><br/>
+		<span class="about">See some <a href="#">projects</a> or <a id="contact" href="#">contact me</a>.</span>
+	</div>
+	
+	</body>
+</html>
+
+
+
+

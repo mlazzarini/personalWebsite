@@ -1,0 +1,212 @@
+/* CSS 3 ANIMATIONS */
+
+@-webkit-keyframes gearRotation {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes secondGearRotation {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(-360deg); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* STYLE */
+
+html {
+  height: 100%;
+  background: url(images/triBackground.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	height:auto;
+	text-align: center;
+    color: #005267;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size:1.5em;
+    line-height: 1.5em;
+}
+
+#gears{
+	width:150px;
+	margin: 3% auto;
+}
+
+#gears:hover .gear {
+	animation-duration: 1s;
+}
+
+
+.gear{
+	width:100px;
+	-webkit-animation: gearRotation 3s infinite linear;
+}
+
+.yellow{
+	margin: -52px 0 0 105px;
+	-webkit-animation-name: secondGearRotation;
+}
+
+.presentation{
+	margin: 2% 0 ;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.name{
+	font-size:1.5em;
+}
+
+.evidence{
+	font-family: 'Anton', sans-serif;
+}
+
+.less{
+	font-size:0.5em;
+}
+
+.about{
+
+	font-size:1em;
+}
+
+#contacts{
+	margin: 5em 0;
+	display:none;
+}
+
+#projects{
+	margin: 5em 0 .5em 0;
+	display:none;
+}
+
+a {
+	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	border-bottom: dotted 1px;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: #008fb3 !important;
+}
+
+a:active {
+	color: #008fb3 !important;
+}
+
+a.nolink{
+	border-bottom: none;
+}
+
+/********************* PROJECTS ***************************/
+
+#plist{
+	margin:auto;
+	width: 50%;
+}
+
+.pitem{
+	width:100%;
+	height: 150px;
+}
+
+.pimage{
+	width:30%;
+	float: left;
+	height:100%;
+}
+
+.pimage img{
+	max-width:150px;
+}
+
+.pdescription{
+	width: 70%;
+	font-size:.75em;
+	float: left;
+	height:100%;
+}
+
+.pdescription-no-img{
+	width: 100%;
+	font-size:.75em;
+	float: left;
+	height:100%;
+}
+
+.ptitle{
+	font-weight: bold;
+}
+
+@media screen and (max-width: 980px) {
+	#plist{
+		margin:auto;
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+
+	#plist{
+		margin:0;
+		width: 100%;
+	}
+	
+	.pitem{
+		width:100%;
+		height: 100%;
+	}
+	.pimage{
+		display: none;
+	}
+	
+	/*.pimage img{
+		max-width:70px;
+		margin: 1em;
+	}*/
+	
+	.pdescription{
+		width: 100%;
+		font-size:.75em;
+		float: left;
+		height:100%;
+		margin: 1.5em 0;
+	}
+
+
+}
+
+/*
+@media screen and (max-width: 480px) {
+
+	#plist{
+		margin:0;
+		width: 100%;
+	}
+
+}
+*/
+
+#footer{
+	font-size:.75em;
+	line-height: 1.2em;
+	margin: 2em 0 1em 0;
+}
+

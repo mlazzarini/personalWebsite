@@ -1,0 +1,102 @@
+/* CSS 3 ANIMATIONS */
+
+@-webkit-keyframes gearRotation {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes secondGearRotation {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(-360deg); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* STYLE */
+
+html {
+  height: 100%;
+  background: url(images/triBackground.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	height:auto;
+	text-align: center;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size:1.5em;
+}
+
+#mainPresentation{
+	height:100%;
+	margin: 5% 10%;
+	text-align: left;
+}
+
+#mainPresentation #name{
+	font-size:1.5em;
+	/*margin: 2% 0 ;*/
+	
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.about{
+	font-size:1.0em;
+	/*margin: 2% 0 ;*/
+	
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}
+
+
+a {
+	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	border-bottom: dotted 1px;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: #008fb3 !important;
+}
+
+a:active {
+	color: #008fb3 !important;
+}
+
+a#contact:hover {
+	border-bottom-color: transparent;
+	color: #ff0066 !important;
+}
+
+a#contact:active {
+	color: #ff0066 !important;
+}
+
+a#projects:hover {
+	border-bottom-color: transparent;
+	color: #008fb3 !important;
+}
+
+a#projects:active {
+	color: #008fb3 !important;
+}
+

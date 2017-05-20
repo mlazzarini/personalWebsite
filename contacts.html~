@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Margherita Lazzarini page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="style.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=Anton|Archivo+Narrow" rel="stylesheet">	
+	</head>
+	<body>
+		<div id="content">
+			<div id="contacts" class="presentation">
+				<span class="name evidence">Contacts</span> 
+				<br/><br/>
+		
+				<span class="about">Here's my <a href="https://it.linkedin.com/in/margherita-lazzarini-04380a60" target="blank">LinkedIn page</a><br/>
+				Here you can download my <a target="blank" href="./data/onePageCv.pdf"> english CV </a>  </span>  <br/><br/>
+				<span class="about">E-mail: margherita.lazzarini@gmail.com</span><br/>
+				<span class="about">Skype ID: margheritalazzariniunibo</span>
+				<br/><br/>
+				<a href="index.html"> < Back</a>
+			</div> <!-- contacts -->
+		</div> <!-- content -->
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+				&copy; Margherita Lazzarini. All rights reserved. <!--Pic by: <a href="http://www.freepik.com/free-vector/colorful-gears-icons_789670.htm">Freepik</a>-->
+				<br/>Background by: <a href="https://qrohlf.com/trianglify-generator/">trianglify-generator</a>
+
+			</div>
+
+	</body>
+</html>
+
+
+
+
