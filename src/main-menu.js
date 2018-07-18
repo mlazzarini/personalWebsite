@@ -1,23 +1,26 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react/dist/commonjs'
 
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
+
 export class MainMenu extends React.Component {
 	constructor(props) {
 		super(props)
-		this.handleItemClick = this.handleItemClick.bind(this)
+		this.handleItemClick = this.handleItemClick.bind(this);
 	}
 
-	handleItemClick(e, {title}) {
-		this.props.onClick(title);
+	handleItemClick(e) {
+		this.props.onClick(e);
 	}
 	
 	render() {
 		return (
-			<Menu secondary>
-				<Menu.Item name='Projects' title='projects' onClick={this.handleItemClick} />
-				<Menu.Item name='Contact me' title='contacts' onClick={this.handleItemClick} />
-				<Menu.Item name='Read it!' title='reads' onClick={this.handleItemClick} />
-			</Menu>
+			<div>
+				<Button bsStyle="primary" onClick={() => this.handleItemClick('projects')}>Projects</Button>
+				<Button bsStyle="primary" onClick={() => this.handleItemClick('contacts')}>Contact me</Button>
+				<Button bsStyle="primary" onClick={() => this.handleItemClick('reads')}>Read it!</Button>
+			</div>
 		)
 	}
 }
