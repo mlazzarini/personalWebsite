@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import 'semantic-ui-css/semantic.min.css';
-import {MyDiv} from './my-div.js';
-import {MainMenu} from './main-menu.js';
+import {Content} from './content';
+import {MainMenu} from './main-menu';
 	
 class Container extends React.Component {
-	state = { selectedSection: 'About me' }
-	setSection = (section) => {
-		console.log(section);
+	state = {
+		selectedSection: 'home'
+	}
+	setSection = section => {
 		this.setState({selectedSection: section});
 	}
 	render() {
 		return (
 			<div>
-				<MainMenu callbackFromParent={this.setSection}/>
-				<MyDiv section={this.state.selectedSection}/>
+				<MainMenu onClick={this.setSection}/>
+				<Content section={this.state.selectedSection}/>
 			</div>
 		);
 	}
