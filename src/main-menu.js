@@ -1,8 +1,8 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react/dist/commonjs'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
+import './main-menu.css';
 
 export class MainMenu extends React.Component {
 	constructor(props) {
@@ -17,9 +17,9 @@ export class MainMenu extends React.Component {
 	render() {
 		return (
 			<div>
-				<Button bsStyle="primary" onClick={() => this.handleItemClick('projects')}>Projects</Button>
-				<Button bsStyle="primary" onClick={() => this.handleItemClick('contacts')}>Contact me</Button>
-				<Button bsStyle="primary" onClick={() => this.handleItemClick('reads')}>Read it!</Button>
+				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('projects')}>Projects</Button>
+				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('contacts')}>Contact me</Button>
+				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('reads')}>Read it!</Button>
 			</div>
 		)
 	}

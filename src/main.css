@@ -1,0 +1,71 @@
+@-webkit-keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+/*.flower {
+	animation: wind 5s ease alternate infinite;
+  }
+  @keyframes wind {
+	30% { transform: translate(-30px, 5px) rotate(-7deg); }
+	45% { transform: translate(0px, 0px) rotate(0deg); }
+	60% { transform: translate(50px, -5px) rotate(7deg); }
+}
+
+.stem {
+	animation: wind2 5s ease alternate infinite;
+  }
+  @keyframes wind2 {
+	30% { transform: rotate(7deg);  }
+	45% { transform: rotate(0deg); }
+	60% { transform: rotate(-7deg);  }
+} */
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	padding: 10% 0 ;
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+	-moz-animation: fadein 3s; /* Firefox < 16 */
+	-ms-animation: fadein 3s; /* Internet Explorer */
+	-o-animation: fadein 3s; /* Opera < 12.1 */
+	animation: fadein 3s;
+	font-family: 'Arimo', sans-serif;
+	background-color: '#add8e6';
+}
+
+.evidence {
+	font-family: 'Galada', cursive;
+}
+
+.name {
+	font-size: 3em;
+}
+
+a {
+	-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+	border-bottom: dotted 1px;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: #008fb3 !important;
+}
+
+a:active {
+	color: #008fb3 !important;
+}
+
+a.nolink{
+	border-bottom: none;
+}
+
+

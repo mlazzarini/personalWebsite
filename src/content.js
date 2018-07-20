@@ -12,28 +12,28 @@ export class Content extends React.Component {
 		switch(this.props.section) {
 			case 'projects':
 			return (
-				<div>
+				<div className="content" >
 					<p> Selected section now is {this.props.section} </p>
 					<Projects />
 				</div>
 			);
 			case 'contacts':
 			return (
-				<div>
+				<div className="content" >
 					<p> Selected section now is {this.props.section} </p>
 					<ContactMe />
 				</div>
 			);
 			case 'reads':
 				return (
-					<div>
+					<div className="content" >
 						<p> Selected section now is {this.props.section} </p>
 						<ReadIt />
 					</div>
 				);
 			default:
 				return (
-					<div>
+					<div className="content" >
 						<p> Selected section now is {this.props.section} </p>
 					</div>
 				);

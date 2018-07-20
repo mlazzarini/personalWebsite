@@ -1,0 +1,12 @@
+.btn {
+	background-color: #7da7b4;
+	border-color: #7da7b4;
+	margin: 5px;
+	font-family: 'Galada', cursive;
+}
+
+.btn:hover {
+	background-color: #F4A200;
+	border-color: #F4A200;
+	color: #ffffff!important;
+}
