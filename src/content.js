@@ -13,28 +13,24 @@ export class Content extends React.Component {
 			case 'projects':
 			return (
 				<div className="content" >
-					<p> Selected section now is {this.props.section} </p>
 					<Projects />
 				</div>
 			);
 			case 'contacts':
 			return (
 				<div className="content" >
-					<p> Selected section now is {this.props.section} </p>
 					<ContactMe />
 				</div>
 			);
 			case 'reads':
 				return (
 					<div className="content" >
-						<p> Selected section now is {this.props.section} </p>
 						<ReadIt />
 					</div>
 				);
 			default:
 				return (
 					<div className="content" >
-						<p> Selected section now is {this.props.section} </p>
 					</div>
 				);
 		}
