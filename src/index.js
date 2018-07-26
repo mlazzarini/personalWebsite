@@ -18,7 +18,7 @@ class Container extends React.Component {
 		document.body.style.backgroundColor = "#add8e6";
 		document.body.style.color = "#fff";
 		document.body.style.textAlign = "center";
-		document.body.style.fontSize = "2em";
+		document.body.style.fontSize = "1.5em";
 		document.body.style.lineHeight = "2.5em";
 		document.body.style.margin = "0";
 		document.body.style.height = "100%";
