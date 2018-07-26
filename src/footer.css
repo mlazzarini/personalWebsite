@@ -68,3 +68,19 @@ div.particle i.fa-heart-o {
 		opacity: 0;
 	}
 }
+
+.flower {
+	animation: wind 5s ease alternate infinite;
+}
+
+@keyframes wind {
+	30% { transform: translate(10px, 5px); }
+}
+
+.stem {
+	animation: wind-stem 5s ease alternate infinite;
+}
+
+@keyframes wind-stem {
+	30% { transform: skewX(7deg); transform-origin: top;}
+}
