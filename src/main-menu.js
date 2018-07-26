@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import './main-menu.css';
 
