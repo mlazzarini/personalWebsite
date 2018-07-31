@@ -1,35 +1,55 @@
 import React from 'react';
-//import { View, TouchableOpacity, StyleSheet } from 'react-native'
-//import { View, TouchableOpacity, StyleSheet } from '/Users/margherita/Projects/personalWebsite/node_modules/react-native'
 
 import './footer.css';
 
 export class Footer extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {displayHeart: false};
+		this.myRef = React.createRef();
+		this.allHearts = [];
+		this.allFlows = ['flowOne', 'flowTwo', 'flowThree'];
+	}
+	
 	onMouseOver() {
-		const rand = Math.floor((Math.random()*100)+1);
-		const timing = (Math.random()*(1.3-1.0)+1.0).toFixed(1);
-		// this.setState(this.state.concat([
-        //     <i className="fa fa-heart"></i>
-        // ]))
-		// Animate Particle
-		// $('<div class="particle part-'+rand+'" style="font-size:'+Math.floor(Math.random()*(30-22)+22)+'px;"><i class="fa fa-heart-o"></i><i class="fa fa-heart"></i></div>')
-		// .appendTo('.particle-box')
-		// .css({animation: "flowOne " +timing+"s linear"});
-		// $('.part-'+rand).show();
-		// // Remove Particle
-		// setTimeout(() => {
-		// 	$('.part-'+rand).remove();
-		// }, timing*1000-100);
+		this.myRef.current.style.display = 'block';
+		const randName = Math.floor((Math.random()*100)+1);
+		this.setState({displayHeart: true, randName});
 	}
 
 	render() {
+		const divClass = `particle part-${this.state.randName}`;
+		const randSize = Math.floor(Math.random()*(30-22)+22);
+		const randTiming = (Math.random()*(1.3-1.0)+1.0).toFixed(1);
+		var randomFlow = this.allFlows[Math.floor(Math.random() * this.allFlows.length)];
+		const divStyle = {
+			fontSize: `${randSize}px`,
+			animation: `${randomFlow} ${randTiming}s linear`,
+			display: this.state.displayHeart ? 'block' : 'none'
+		};
+		
+		const heart = ( 
+			<div className={divClass} style={divStyle}>
+				<i className="fa fa-heart-o"></i>
+				<i className="fa fa-heart"></i>
+			</div>
+		);
+
+		this.allHearts.push(heart);
+		setTimeout(() => {
+			this.myRef.current.style.display = 'none';
+			this.allHearts = [];
+		}, randTiming*2000);
+
 		return (
 			<div className="footer" >
-				<i className="fa fa-heart"></i>
-				<div className="particle-box"></div>
+				<div className="particle-box" ref={this.myRef}>
 				{
-                    this.props.children
-                }
+					this.allHearts.map(heartBlock => (
+						heartBlock
+					))
+				}
+				</div>
 				<div id="flower-container">
 					<svg id="flower-container-svg" viewBox="0 0 512 512" onMouseOver={this.onMouseOver.bind(this)}>
 						<path className="stem piece" d="M239.6,272.474c-45.221,9.576-60.881,33.214-66.227,50.121v-94.798h-5.172v135.995
