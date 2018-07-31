@@ -39,7 +39,7 @@ export class Footer extends React.Component {
 		setTimeout(() => {
 			this.myRef.current.style.display = 'none';
 			this.allHearts = [];
-		}, randTiming*2000);
+		}, randTiming*1000);
 
 		return (
 			<div className="footer" >
