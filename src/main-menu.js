@@ -15,7 +15,7 @@ export class MainMenu extends React.Component {
 	
 	render() {
 		return (
-			<div>
+			<div className="main-menu">
 				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('projects')}>Projects</Button>
 				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('contacts')}>Contact me</Button>
 				<Button bsStyle="primary" bsSize="large" onClick={() => this.handleItemClick('reads')}>Read it!</Button>
