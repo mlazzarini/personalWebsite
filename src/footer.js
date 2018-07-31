@@ -73,7 +73,7 @@ export class Footer extends React.Component {
 					</svg>
 				</div>
 				<div>
-					&copy; Margherita Lazzarini. All rights reserved.
+					Of course, made with <i className="fa fa-heart" style={{color: '#e25555'}}></i> and <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">ReactJS</a>
 				</div>
 			</div>
 		);
