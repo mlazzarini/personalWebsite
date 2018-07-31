@@ -4,10 +4,6 @@ import {ContactMe} from './sections/contact-me';
 import {ReadIt} from './sections/read-it';
 
 export class Content extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render(){
 		switch(this.props.section) {
 			case 'projects':
