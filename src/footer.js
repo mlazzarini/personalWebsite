@@ -37,7 +37,9 @@ export class Footer extends React.Component {
 
 		this.allHearts.push(heart);
 		setTimeout(() => {
-			this.myRef.current.style.display = 'none';
+			if (this.myRef.current) {
+				this.myRef.current.style.display = 'none';
+			}
 			this.allHearts = [];
 		}, randTiming*1000);
 
