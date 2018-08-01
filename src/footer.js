@@ -12,7 +12,9 @@ export class Footer extends React.Component {
 	}
 	
 	onMouseOver() {
-		this.myRef.current.style.display = 'block';
+		if (this.myRef.current) {
+			this.myRef.current.style.display = 'block';
+		}
 		const randName = Math.floor((Math.random()*100)+1);
 		this.setState({displayHeart: true, randName});
 	}
