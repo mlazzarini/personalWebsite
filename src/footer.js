@@ -5,29 +5,29 @@ import './footer.css';
 export class Footer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {displayHeart: false};
-		this.myRef = React.createRef();
+		this.state = {hideHearts: false};
 		this.allHearts = [];
 		this.allFlows = ['flowOne', 'flowTwo', 'flowThree'];
 	}
 	
 	onMouseOver() {
-		if (this.myRef.current) {
-			this.myRef.current.style.display = 'block';
-		}
 		const randName = Math.floor((Math.random()*100)+1);
-		this.setState({displayHeart: true, randName});
+		const randTiming = (Math.random()*(1.3-1.0)+1.0).toFixed(1);
+		this.setState({randName, randTiming, hideHearts: false});
+		setTimeout(() => {
+			this.setState({hideHearts: true});
+			this.allHearts = [];
+		}, randTiming*1000-100);
 	}
 
 	render() {
 		const divClass = `particle part-${this.state.randName}`;
 		const randSize = Math.floor(Math.random()*(30-22)+22);
-		const randTiming = (Math.random()*(1.3-1.0)+1.0).toFixed(1);
 		var randomFlow = this.allFlows[Math.floor(Math.random() * this.allFlows.length)];
 		const divStyle = {
 			fontSize: `${randSize}px`,
-			animation: `${randomFlow} ${randTiming}s linear`,
-			display: this.state.displayHeart ? 'block' : 'none'
+			animation: `${randomFlow} ${this.state.randTiming}s linear`,
+			display: this.state.hideHearts ? 'none' : 'block'
 		};
 		
 		const heart = ( 
@@ -38,16 +38,10 @@ export class Footer extends React.Component {
 		);
 
 		this.allHearts.push(heart);
-		setTimeout(() => {
-			if (this.myRef.current) {
-				this.myRef.current.style.display = 'none';
-			}
-			this.allHearts = [];
-		}, randTiming*1000);
 
 		return (
-			<div className="footer" >
-				<div className="particle-box" ref={this.myRef}>
+			<div className="footer">
+				<div className="particle-box" ref={this.particleBoxRef}>
 				{
 					this.allHearts.map(heartBlock => (
 						heartBlock
